@@ -4,7 +4,7 @@ object OOBasicv1 extends App {
   
 /* SCALA DOES NOT HAVE CLASS-LEVEL FUNCTIONALITY ("static")..as defined in java. 
   
-  We split the functionalities between class & Object(Singleton). We create companion .... where we have 
+  We split the functionalities between class & Object(Singleton).We create companion .... where we have 
   class and object of same name i.e (Person class & Person Object) inside OOBasicv1. 
   We can define functions and variables in both. 
   Person class - instance-level functionality
@@ -46,12 +46,14 @@ object OOBasicv1 extends App {
   
  // def main(args: Array[String]): Unit
   // {
-  // accessing static fields (defined in Object).. doesnot depends on instance
+  
+  
+ // accessing static fields (defined in Object).. does not depends on instance
 //  println(Person.N_EYES)
-//  println(Person.canFly)
+//  println(Person.canFly)     //  -- object's method invoked
   
   // accessing class method
     val personObj = new Person("AAA")
-    personObj.greeting("XXX");
+    personObj.greeting("XXX"); // -- class's method invoked
     // }  // End of main
 }
