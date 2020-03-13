@@ -55,15 +55,17 @@ val someOtherValue = {
   println(aRepeatedFunction("hello",3))
 
   
-// Defining a function inside function  
+// Defining a function inside function  AUXILARY FUNCTION ...  
   /*
    * The return type of def aBigFunction(n: Int) =>  aSmallerFunction(n, n-1)
    */
+  
+  
   def aBigFunction(n: Int) = {
     def aSmallerFunction(a: Double, b: Double): Double = a + b
     aSmallerFunction(n, n-1)
   }
- // println(aBigFunction(5))
+  println(aBigFunction(5))
   
  
    def factorial(n: Int): Int =
@@ -78,7 +80,7 @@ val someOtherValue = {
     else {
       println("Computing factorial of " + n + " - I first need factorial of " + (n-1))
       val result = n * factorial_updated(n-1)
-      println("Computed factorial of " + n)
+     // println("Computed factorial of " + n)
       result
     }
 }
@@ -95,7 +97,7 @@ val someOtherValue = {
 
      @tailrec
        def factutil(n:Int , accumulator:BigInt) : BigInt = {
-       println(accumulator)
+   //    println(accumulator)
          if (n <= 1) accumulator
          else factutil(n-1, n* accumulator)
           }
@@ -137,9 +139,9 @@ val someOtherValue = {
   }
   
   
-  println(isPrime(7))
   println(isPrime(9))
-  println(isPrime(37 * 17))
+//  println(isPrime(9))
+ // println(isPrime(37 * 17))
      
      
 }
