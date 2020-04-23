@@ -48,7 +48,7 @@ val someOtherValue = {
   def aRepeatedFunction(aString:String, n: Int): String = {
     
   //    println((aString ) + ",,"+ n)
-    if (n == 1) "xx"
+    if (n == 0) "xx"
     else  aString + aRepeatedFunction(aString, n-1)
   }
   
@@ -65,7 +65,7 @@ val someOtherValue = {
     def aSmallerFunction(a: Double, b: Double): Double = a + b
     aSmallerFunction(n, n-1)
   }
-  println(aBigFunction(5))
+ // println(aBigFunction(5))
   
  
    def factorial(n: Int): Int =
@@ -76,15 +76,16 @@ val someOtherValue = {
    
  def factorial_updated(n: Int): Int = {
    println("factorial() method invoked on" + "\t"+ n)
+   var result =0
     if (n <= 0) 1
     else {
       println("Computing factorial of " + n + " - I first need factorial of " + (n-1))
-      val result = n * factorial_updated(n-1)
-     // println("Computed factorial of " + n)
+       result = n * factorial_updated(n-1)
+      println("Computed factorial of " + n +"is" + "\t"+result)
       result
     }
 }
-   //  println(factorial_updated(5))
+//     println(factorial_updated(5))
      
     
      
@@ -139,7 +140,7 @@ val someOtherValue = {
   }
   
   
-  println(isPrime(9))
+ // println(isPrime(9))
 //  println(isPrime(9))
  // println(isPrime(37 * 17))
      
